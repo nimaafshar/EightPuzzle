@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane fx:id="gridPane" alignment="center" hgap="5.0" vgap="5.0">
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Button fx:id="btn1" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="1" />
+            <Button fx:id="btn2" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="2" GridPane.columnIndex="1" />
+            <Button fx:id="btn3" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn4" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="btn5" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn6" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn7" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="btn8" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="8" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="resetButton" onAction="#reset" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Reset" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
