@@ -29,7 +29,25 @@ public class Controller implements Initializable {
      * will be used to shuffle elements at first
      */
     private List<Point> points;
+    /**
+     * The Board We Manage Game on
+     */
     private int[][] board;
+
+    /**
+     * empty cell address which is 1,1 at first
+     */
+    private Point emptyCell = new Point(1,1);
+
+
+
+    private final int[][] winningBoard = new int[][]{
+            {1,2,3},
+            {4,0,5},
+            {6,7,8}
+    };
+
+
     public Button resetButton;
 
     class Point{
@@ -42,6 +60,10 @@ public class Controller implements Initializable {
         @Override
         public String toString() {
             return "Point{x:"+this.x+",y:"+this.y+"}";
+        }
+
+        boolean isNeighbor(Point point){
+            return Math.abs(point.x - this.x) + Math.abs(point.y - this.y) <= 1;
         }
     }
 
@@ -63,16 +85,52 @@ public class Controller implements Initializable {
 
     public void reset() {
         Collections.shuffle(points);
+        board = new int[3][3];
         for(int i=0;i<8;i++){
             Point point = points.get(i);
             GridPane.setConstraints(elements[i],point.x,point.y);
             board[point.y][point.x] = Integer.valueOf(elements[i].getText());
         }
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                System.out.printf("%d ",board[i][j]);
+    }
+
+    public void move(ActionEvent actionEvent) {
+        Button source = (Button) actionEvent.getSource();
+        Point myAddress = new Point(GridPane.getColumnIndex(source),GridPane.getRowIndex(source));
+        if(myAddress.isNeighbor(emptyCell)){
+            int sourceNumber = Integer.valueOf(source.getText());
+            if(myAddress.y - emptyCell.y == 1){
+                //move up
+                GridPane.setConstraints(source,myAddress.x,myAddress.y-1);
+                board[myAddress.y-1][myAddress.x] = sourceNumber;
+            }else if(myAddress.y - emptyCell.y == -1){
+                //move down
+                GridPane.setConstraints(source,myAddress.x,myAddress.y+1);
+                board[myAddress.y+1][myAddress.x] = sourceNumber;
+            }else if(myAddress.x - emptyCell.x == 1){
+                //move left
+                GridPane.setConstraints(source,myAddress.x-1,myAddress.y);
+                board[myAddress.y][myAddress.x-1] = sourceNumber;
+            }else if(myAddress.x - emptyCell.x == -1){
+                //move right
+                GridPane.setConstraints(source,myAddress.x+1,myAddress.y);
+                board[myAddress.y][myAddress.x+1] = sourceNumber;
             }
-            System.out.println();
+            //moving empty cell
+            board[myAddress.y][myAddress.x] = 0;
+            emptyCell.x = myAddress.x;
+            emptyCell.y = myAddress.y;
+            if(isCompleted()){
+                Main.endWithCongrats();
+            }
         }
     }
+
+    private boolean isCompleted(){
+
+        if(Arrays.deepEquals(board,winningBoard)){
+            return true;
+        }
+        return false;
+    }
+
 }

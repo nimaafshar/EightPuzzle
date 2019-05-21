@@ -27,14 +27,14 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <children>
-            <Button fx:id="btn1" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="1" />
-            <Button fx:id="btn2" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="2" GridPane.columnIndex="1" />
-            <Button fx:id="btn3" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btn4" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="4" GridPane.rowIndex="2" />
-            <Button fx:id="btn5" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="btn6" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn7" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="7" GridPane.rowIndex="1" />
-            <Button fx:id="btn8" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="8" GridPane.columnIndex="2" />
+            <Button fx:id="btn1" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="1" />
+            <Button fx:id="btn2" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="2" GridPane.columnIndex="1" />
+            <Button fx:id="btn3" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn4" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="btn5" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn6" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn7" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="btn8" onAction="#move" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" text="8" GridPane.columnIndex="2" />
          </children>
       </GridPane>
       <Separator orientation="VERTICAL" prefHeight="200.0" />
