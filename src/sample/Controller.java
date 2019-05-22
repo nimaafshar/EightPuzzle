@@ -85,7 +85,8 @@ public class Controller implements Initializable {
 
     public void reset() {
         Collections.shuffle(points);
-        board = new int[3][3];
+        this.board = new int[3][3];
+        this.emptyCell = new Point(1,1);
         for(int i=0;i<8;i++){
             Point point = points.get(i);
             GridPane.setConstraints(elements[i],point.x,point.y);
