@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <Button style="@style/elementButton" android:id="@+id/button_0_0"/>
+            <Button style="@style/elementButton" android:id="@+id/button_0_1"/>
+            <Button style="@style/elementButton" android:id="@+id/button_0_2"/>
+        </TableRow>
+        <TableRow>
+            <Button style="@style/elementButton" android:id="@+id/button_1_0"/>
+            <Button style="@style/elementButton" android:id="@+id/button_1_1"/>
+            <Button style="@style/elementButton" android:id="@+id/button_1_2"/>
+        </TableRow>
+        <TableRow>
+            <Button style="@style/elementButton" android:id="@+id/button_2_0"/>
+            <Button style="@style/elementButton" android:id="@+id/button_2_1"/>
+            <Button style="@style/elementButton" android:id="@+id/button_2_2"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EightPuzzle</string>
+    <string name="congrats_message">Congratulations</string>
+</resources>
