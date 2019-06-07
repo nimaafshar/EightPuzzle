@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             elements[lastEmpty.row][lastEmpty.col].setVisibility(View.VISIBLE);
             elements[lastEmpty.row][lastEmpty.col].setText(String.valueOf(puzzle.board[lastEmpty.row][lastEmpty.col]));
             if(puzzle.hasWon()){
-                Toast.makeText(this,getResources().getString(R.string.congrats_message),Toast.LENGTH_LONG);
+                Toast.makeText(this,getResources().getString(R.string.congrats_message),Toast.LENGTH_LONG).show();
             }
         }
     }
